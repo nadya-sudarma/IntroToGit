@@ -48,3 +48,29 @@ All members of the group will now:
 10. Once members have completed step 9, the team leader should create a pull request to the main repo from step 2
 
 **ALWAYS PUSH TO ORIGIN, _NEVER_ UPSTREAM**
+
+
+## Reference
+### Common Terms
+| Term     | Definition |
+|----------|------------|
+| **Repository ("Repo")** | The database that stores the files | 
+| **Working Directory** | Your local directory of files |
+| **Revision** | The version that a specific files is on |
+| **Branch** | A separatecopy of the code, where changes can be made independently from the main "trunk" |
+| **Fork** | A copy of a repository | 
+| **Upstream** | Typically the repo that you forked from |
+| **Pull request ("PR")** | A request to merge changes from one branch to another. Can be between branches across different forks of a repo |
+
+
+### Basic Commands
+| Command      | Usage |
+|--------------|-------|
+| **`git clone <repo_url>`**| Clone a repository into a new local directory |
+| **`git remote [-v add]`** | Your reference to online repositories. `-v` lists the reference name and corresponding link to the repository. `add <name> <repo_url>` adds a new reference to an online repository |
+| **`git checkout [-b] <branch>`** | Switches to another branch on your local working copy. Adding the `-b` flag will create the branch if it doesn't exist and switch inside it |
+| **`git status`** | Shows the working tree status (files with changes, files ready for commit, etc.) |
+| **`git pull <repo_name> <repo_branch>`** | Fetch from and integrate with another repo or a local branch | 
+| **`git add <file_name>`** | Adds a change in the working directory to the staging area |
+| **`git commit –m "<message>"`** | Record changes to a repo |
+| **`git push <repo_name> <branch>`** | Sends commits (code changes) to remote repo |
