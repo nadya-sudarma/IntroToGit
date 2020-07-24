@@ -17,35 +17,21 @@ https://www.atlassian.com/git/tutorials/install-git#windows
 
 ## Instructions
 
-1. Organize into groups of 4-5
-2. Choose a team leader to fork off of our public code repo:
-	
-https://github.com/cnoah/IntroToGit​	
-​
-
-3. Everyone else fork off of the repo created from step 2
-
-All members of the group will now:
-
-4. Clone from your personal repo
-
-	• *Hint:* `git clone ....`
-
-5. Setup upstream environment
-
-	• *Hint:* `git remote ....`
-
-6. Create a new branch (called "myDev") from your **master** branch
-
-	• *Hint:* `git checkout ....`
-
-7. Add your name to names.txt
-8. Push your changes to your personal repo on Github
-	
-	• *Hint:* **P**aul **A**dores **C**uddly **P**uppies
-
-9. All non-team leaders of the group should create a pull request to the team leader's repo on Github
-10. Once members have completed step 9, the team leader should create a pull request to the main repo from step 2
+1. Identify team leader
+    * If nobody volunteers, then whoever's birthday was most recent!
+2. Team leader forks master repository: https://github.com/cnoah/IntroToGit​	
+3. Team members fork **team leader's** repository
+4. Everyone:
+    1. Clone your forked repo to your local computer
+    2. Set up "upstream" reference (Hint: `git remote...`)
+        1. Team leader - use https://github.com/cnoah/IntroToGit as "upstream"
+        2. Team members - use your team leader's repo
+    3. Check out your team's branch (Hint: `git checkout...`)
+    4. Add your name to **names.txt**
+    5. Push your local changes to your repo
+5. Team members create a pull request from their repo to their team leader's repo, in the team branch
+6. Team leaders merge pull request, after any merge conflicts are resolved
+7. Once all team member PRs are merged into team leader repo, team leader creates PR to their upstream (cnoah/IntroToGit)
 
 **ALWAYS PUSH TO ORIGIN, _NEVER_ UPSTREAM**
 
@@ -57,7 +43,7 @@ All members of the group will now:
 | **Repository ("Repo")** | The database that stores the files | 
 | **Working Directory** | Your local directory of files |
 | **Revision** | The version that a specific files is on |
-| **Branch** | A separatecopy of the code, where changes can be made independently from the main "trunk" |
+| **Branch** | A separate copy of the code, where changes can be made independently from the main "trunk" |
 | **Fork** | A copy of a repository | 
 | **Upstream** | Typically the repo that you forked from |
 | **Pull request ("PR")** | A request to merge changes from one branch to another. Can be between branches across different forks of a repo |
@@ -70,7 +56,7 @@ All members of the group will now:
 | **`git remote [-v add]`** | Your reference to online repositories. `-v` lists the reference name and corresponding link to the repository. `add <name> <repo_url>` adds a new reference to an online repository |
 | **`git checkout [-b] <branch>`** | Switches to another branch on your local working copy. Adding the `-b` flag will create the branch if it doesn't exist and switch inside it |
 | **`git status`** | Shows the working tree status (files with changes, files ready for commit, etc.) |
-| **`git pull <repo_name> <repo_branch>`** | Fetch from and integrate with another repo or a local branch | 
+| **`git pull <repo_name> <repo_branch>`** | Fetch from remote repo (usually "upstream") and integrate with local working directory | 
 | **`git add <file_name>`** | Adds a change in the working directory to the staging area |
 | **`git commit –m "<message>"`** | Record changes to a repo |
 | **`git push <repo_name> <branch>`** | Sends commits (code changes) to remote repo |
